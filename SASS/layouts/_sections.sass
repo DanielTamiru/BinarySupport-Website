@@ -1,0 +1,26 @@
+#intro
+    grid-area: intro
+    display: grid
+    gap: inherit
+    grid-template-columns: 1fr 1fr
+    
+    .left
+        height: 800px
+        background-color: $secondary
+        
+    .right
+        height: 800px
+        background-color: $dgrey
+
+    @include breakpoint-mobile
+        grid-template-columns: 1fr
+    
+#client-list
+    grid-area: clients
+    min-height: 180px
+    background-color: lightgray
+
+#description
+    grid-area: description
+    min-height: 900px
+    background-color: lightblue

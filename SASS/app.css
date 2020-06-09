@@ -1,0 +1,49 @@
+#content {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  padding: 0;
+  grid-template-areas: "headr" "intro" "descr" "footr";
+  background-color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black; }
+  #content h1, #content h2, #content h3 {
+    color: #b38300;
+    font-weight: bold; }
+  #content section {
+    display: block; }
+
+header {
+  grid-area: headr;
+  height: 100px;
+  background-color: #81a0de; }
+
+#intro {
+  grid-area: intro;
+  min-height: 100px;
+  background-color: #4a4a48;
+  display: grid;
+  grid-template-columns: 1fr 1fr; }
+  #intro .left {
+    margin: 5px;
+    height: 100px;
+    background-color: orange; }
+  #intro .right {
+    margin: 5px;
+    height: 100px;
+    background-color: green; }
+
+#description {
+  grid-area: descr;
+  min-height: 100px;
+  background-color: #b38300; }
+
+footer {
+  grid-area: footr;
+  height: 100px;
+  background-color: #82775a; }
+
+.navbar {
+  font-size: 2rem; }
+
+/*# sourceMappingURL=app.css.map */

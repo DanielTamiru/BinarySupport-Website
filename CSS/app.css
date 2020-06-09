@@ -1,0 +1,53 @@
+#content {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  padding: 0;
+  grid-template-areas: "header" "intro" "clients" "description" "footer";
+  background-color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  color: black; }
+  #content h1, #content h2, #content h3 {
+    color: #b38300;
+    font-weight: bold; }
+
+header {
+  grid-area: header;
+  height: 100px;
+  background-color: #81a0de; }
+
+#intro {
+  grid-area: intro;
+  display: grid;
+  gap: inherit;
+  grid-template-columns: 1fr 1fr; }
+  #intro .left {
+    height: 800px;
+    background-color: #b38300; }
+  #intro .right {
+    height: 800px;
+    background-color: #4a4a48; }
+  @media only screen and (max-width: 768px) {
+    #intro {
+      grid-template-columns: 1fr; } }
+
+#client-list {
+  grid-area: clients;
+  min-height: 180px;
+  background-color: lightgray; }
+
+#description {
+  grid-area: description;
+  min-height: 900px;
+  background-color: lightblue; }
+
+footer {
+  grid-area: footer;
+  height: 100px;
+  background-color: #82775a; }
+
+.navbar {
+  font-size: 2rem; }
+
+/*# sourceMappingURL=app.css.map */
