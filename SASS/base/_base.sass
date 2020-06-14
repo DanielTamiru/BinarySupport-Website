@@ -1,13 +1,27 @@
-#content
+h1, h2, h3
+    color: $accent
+    font-weight: bold
+.container-fluid
+    padding: 0
+
+#home-content
     display: grid
+    padding: 0
     grid-template-columns: 1fr
     margin: 0 auto
-    padding: 0
     grid-template-areas: "header" "intro" "clients" "description" "footer"
     background-color: white
     font-family: $default-font
     color: black
+    
+#services-content
+    @extend #home-content
+    grid-template-columns: "header" "services" "footer"
 
-    h1, h2, h3
-        color: $accent
-        font-weight: bold
+#about-content
+    @extend #home-content
+    grid-template-columns: "header" "info" "footer"
+
+#contact-content
+    @extend #home-content
+    grid-template-columns: "header" "contact-info" "footer"

@@ -1,15 +1,28 @@
-#content {
+h1, h2, h3 {
+  color: #b48f30da;
+  font-weight: bold; }
+
+.container-fluid {
+  padding: 0; }
+
+#home-content, #services-content, #about-content, #contact-content {
   display: grid;
+  padding: 0;
   grid-template-columns: 1fr;
   margin: 0 auto;
-  padding: 0;
   grid-template-areas: "header" "intro" "clients" "description" "footer";
   background-color: white;
   font-family: Verdana, Geneva, sans-serif;
   color: black; }
-  #content h1, #content h2, #content h3 {
-    color: #b48f30da;
-    font-weight: bold; }
+
+#services-content {
+  grid-template-columns: "header" "services" "footer"; }
+
+#about-content {
+  grid-template-columns: "header" "info" "footer"; }
+
+#contact-content {
+  grid-template-columns: "header" "contact-info" "footer"; }
 
 header {
   grid-area: header;
@@ -107,6 +120,21 @@ header {
       @media only screen and (max-width: 992px) {
         #description .right p {
           margin-bottom: 0; } }
+
+#services-container {
+  grid-area: "services";
+  background-color: #8db5a3;
+  min-height: 900px; }
+
+#about-info {
+  grid-area: "info";
+  background-color: #8db5a3;
+  min-height: 900px; }
+
+#contact-info {
+  grid-area: "contact-info";
+  background-color: #8db5a3;
+  min-height: 900px; }
 
 footer {
   grid-area: footer;
