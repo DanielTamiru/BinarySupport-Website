@@ -3,47 +3,151 @@
   grid-template-columns: 1fr;
   margin: 0 auto;
   padding: 0;
-  grid-template-areas: "headr" "intro" "descr" "footr";
+  grid-template-areas: "header" "intro" "clients" "description" "footer";
   background-color: white;
   font-family: Verdana, Geneva, sans-serif;
   color: black; }
   #content h1, #content h2, #content h3 {
-    color: #b38300;
+    color: #b48f30da;
     font-weight: bold; }
-  #content section {
-    display: block; }
 
 header {
-  grid-area: headr;
-  height: 100px;
-  background-color: #81a0de; }
+  grid-area: header;
+  background-color: #8db5a3; }
 
 #intro {
   grid-area: intro;
-  min-height: 100px;
-  background-color: #4a4a48;
   display: grid;
-  grid-template-columns: 1fr 1fr; }
+  gap: inherit;
+  grid-template-columns: 6fr 5fr;
+  background-color: #8db5a3;
+  margin-top: 3rem;
+  color: white; }
+  @media only screen and (max-width: 768px) {
+    #intro {
+      grid-template-columns: 1fr; } }
   #intro .left {
-    margin: 5px;
-    height: 100px;
-    background-color: orange; }
+    padding: 150px 0% 60px 20%;
+    margin: 0 auto; }
+    @media only screen and (max-width: 768px) {
+      #intro .left {
+        padding: 100px 10% 30px 10%; } }
+    #intro .left h1 {
+      font-size: 3.2rem;
+      -webkit-text-stroke: 3px white; }
   #intro .right {
-    margin: 5px;
-    height: 100px;
-    background-color: green; }
+    padding: 50px 10% 80px 10%; }
+    #intro .right .preview-box {
+      background-color: inherit;
+      width: 75%;
+      display: block;
+      text-align: center;
+      margin: 0 auto;
+      -webkit-box-radius: 0;
+      -moz-border-radius: 0;
+      border-radius: 0;
+      -webkit-box-shadow: 0 0 8px #666;
+      -moz-box-shadow: 0 0 8px #666;
+      box-shadow: 0 0 8px #666;
+      border: 1px solid inherit; }
+      #intro .right .preview-box h2 {
+        padding-top: 2rem;
+        text-align: center;
+        color: white; }
+      #intro .right .preview-box img {
+        width: 90%;
+        display: block;
+        margin: 30px auto; }
+  #intro button {
+    background-color: #b48f30da;
+    border: none;
+    margin-bottom: 30px; }
+    #intro button:hover {
+      background-color: rgba(168, 133, 45, 0.8549019608); }
+
+#client-list {
+  grid-area: clients;
+  background-color: white; }
+  #client-list h5 {
+    text-align: center;
+    font-weight: bold;
+    padding: 2rem 0 2rem; }
+  #client-list .company-wrapper {
+    display: flex;
+    justify-content: space-evenly; }
+    #client-list .company-wrapper .client {
+      width: 18%; }
 
 #description {
-  grid-area: descr;
-  min-height: 100px;
-  background-color: #b38300; }
+  grid-area: description;
+  background-color: #e8e8e8;
+  display: grid;
+  grid-template-columns: 3fr 6fr;
+  margin-top: 3rem; }
+  @media only screen and (max-width: 992px) {
+    #description {
+      grid-template-columns: 1fr; } }
+  @media only screen and (max-width: 992px) {
+    #description .left {
+      grid-row: 2/3; } }
+  #description .left img {
+    display: block;
+    width: 80%;
+    max-width: 450px;
+    margin: 30px auto;
+    margin-top: 60px;
+    margin-bottom: 70px; }
+  #description .right {
+    padding-left: 70px;
+    padding-right: 70px; }
+    #description .right h2 {
+      margin-top: 6rem; }
+    #description .right p {
+      font-size: 1.4rem;
+      margin-bottom: 5rem; }
+      @media only screen and (max-width: 992px) {
+        #description .right p {
+          margin-bottom: 0; } }
 
 footer {
-  grid-area: footr;
-  height: 100px;
-  background-color: #82775a; }
+  grid-area: footer;
+  padding: 10px 20px 10px;
+  background-color: #324e41;
+  color: white;
+  text-align: center; }
+  footer a {
+    color: white;
+    text-decoration: none; }
+    footer a:link, footer a:visited, footer a:hover, footer a:active {
+      color: white;
+      text-decoration: none; }
+  footer .social-media {
+    margin-top: 45px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center; }
+    footer .social-media a {
+      display: block;
+      marging-left: 22px;
+      margin-right: 22px;
+      transition: all 0.2s ease-in-out; }
+      footer .social-media a:hover {
+        transform: scale(1.1); }
+  footer hr {
+    background-color: white;
+    width: 15%; }
+  footer .footer-links {
+    margin-bottom: 45px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: center; }
+    footer .footer-links h5 {
+      color: white;
+      font-size: 0.85rem;
+      marging-left: 35px;
+      margin-right: 35px; }
 
-.navbar {
-  font-size: 2rem; }
+.navbar .nav-item {
+  margin: 0 6px 0; }
 
 /*# sourceMappingURL=app.css.map */

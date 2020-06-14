@@ -149,4 +149,16 @@ footer {
 .navbar .nav-item {
   margin: 0 6px 0; }
 
+.modal-body .fine-print {
+  color: gray;
+  font-size: 0.7rem; }
+
+.modal-footer .send-btn {
+  background-color: #8db5a3;
+  border: none; }
+  .modal-footer .send-btn:hover {
+    background-color: #7aa994; }
+.modal-footer .close-btn {
+  border: none; }
+
 /*# sourceMappingURL=app.css.map */
