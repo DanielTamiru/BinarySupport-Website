@@ -1,4 +1,39 @@
 footer
     grid-area: footer
-    height: 100px
-    background-color: $accent
+    padding: 10px 20px 10px
+    background-color: $dark-primary
+    color: white
+    text-align: center
+    a   
+        color: white
+        text-decoration: none
+        &:link, &:visited, &:hover, &:active
+            color: white
+            text-decoration: none
+
+    .social-media     
+        margin-top: 45px
+        margin-bottom: 15px
+        display: flex
+        justify-content: center
+        a
+            display: block
+            marging-left: 22px
+            margin-right: 22px
+            transition: all .2s ease-in-out
+            &:hover
+                transform: scale(1.1)
+
+    hr
+        background-color: white
+        width: 15%
+    .footer-links
+        margin-bottom: 45px
+        margin-top: 15px
+        display: flex
+        justify-content: center
+        h5
+            color: white
+            font-size: 0.85rem
+            marging-left: 35px
+            margin-right: 35px

@@ -9,27 +9,92 @@
     <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <!--Custom Styling-->
     <link rel="stylesheet" href="CSS/app.css">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
     <div class="container-fluid" id="content">
         <header>
+            <!--navbar-->
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+                <a class="navbar-brand" href="#">BinarySupport</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+              
         </header>
 
         <section id="intro">
             <div class="left">
+                <div class="content-wrapper">
+                    <h1>Good Service is Binary</h1>
+                    <br>
+                    <h4>Our goal at BinarySupport is simple. Provide families and services with the best computer services available today. We provide a wide range of services. Click below for more info: </h4>
+                    <br>
+                    <button type="button" data-toggle="button" class="btn btn-secondary btn-lg">Learn More</button>
+                </div>
             </div>
             <div class="right">
+                <div class="preview-box">
+                    <h2>Want to get in touch?</h2>
+                    <img src="assets/clock.png" class="img-fluid">
+                    <button type="button" data-toggle="button" class="btn btn-secondary btn-lg">Contact Us</button>
+                </div>
             </div>
         </section>
 
         <section id="client-list">   
+            <h5>Previous Clients</h5>
+            <div class="company-wrapper">
+                <img  src="assets/tdbank.jpg" class="img-fluid client">
+                <img  src="assets/rbcbank.jpg" class="img-fluid client">
+                <img  src="assets/compucom.png" class="img-fluid client">
+            </div>
         </section>
 
         <section id="description">
+            <div class="left">
+                <img src="assets/curstomer-service-saturated.png" class="img-fluid">
+            </div>
+            <div class="right">
+                <h2>Why BinarySupport?</h2>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam hendrerit nisi sed sollicitudin pellentesque. Nunc posuere purus rhoncus pulvinar aliquam. Ut aliquet tristique nisl vitae volutpat. Nulla aliquet porttitor venenatis. Donec a dui et dui fringilla consectetur id nec massa. <br><br> Aliquam erat volutpat. Sed ut dui ut lacus dictum fermentum vel tincidunt neque. Sed sed lacinia lectus. Duis sit amet sodales felis. Duis nunc eros, mattis at dui ac, convallis semper risus. In adipiscing ultrices tellus, in suscipit massa vehicula eu.</p>
+            </div>
         </section>
 
         <footer>
+            <div class="social-media">
+                <a  href="#"><i class="fa fa-linkedin-square fa-4x"></i></a>
+                <a  href="#"><i class="fa fa-facebook-square fa-4x"></i></a>
+                <a  href="#"><i class="fa fa-twitter-square fa-4x"></i></a>
+                <a  href="#"><i class="fa fa-youtube-square fa-4x"></i></a>
+            </div>
+            <hr>
+            <div class="footer-links">
+                <h5><a href="#">Contact</a></h5>
+                <h5><a href="#">Support</a></h5>
+                <h5><a href="#">Terms of Service</a></h5>
+                <h5><a href="#">Need Help?</a></h5>
+            </div>
         </footer>
     </div>
     <!-- Optional JavaScript -->

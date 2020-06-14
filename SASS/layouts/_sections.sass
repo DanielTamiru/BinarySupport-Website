@@ -2,25 +2,90 @@
     grid-area: intro
     display: grid
     gap: inherit
-    grid-template-columns: 1fr 1fr
-    
+    grid-template-columns: 6fr 5fr
+    background-color: $primary
+    margin-top: 3rem
+    color: white
+    +breakpoint-mobile()
+        grid-template-columns: 1fr
+
     .left
-        height: 800px
-        background-color: $secondary
+        padding: 150px 0% 60px 20%
+        +breakpoint-mobile()
+            padding: 100px 10% 30px 10%
+            
+        margin: 0 auto
+        h1
+            font-size: 3.2rem
+              
         
     .right
-        height: 800px
-        background-color: $dgrey
+        padding: 50px 10% 80px 10%
+        .preview-box
+            background-color: inherit
+            width: 75%
+            display: block
+            text-align: center
+            margin: 0 auto
+            +border(0, 0 0 8px #666, 1px solid inherit)
 
-    @include breakpoint-mobile
-        grid-template-columns: 1fr
+            h2
+                padding-top: 2rem
+                text-align: center
+                color: white
+            img
+                width: 90%
+                display: block
+                margin: 30px auto
+            
     
+    
+    button
+        background-color: $accent
+        border: none 
+        margin-bottom: 30px 
+        &:hover
+            background-color: darken($accent, 3%)
+
 #client-list
     grid-area: clients
-    min-height: 180px
-    background-color: lightgray
+    background-color: white
+    h5
+        text-align: center
+        font-weight: bold
+        padding: 2rem 0 2rem
+    .company-wrapper
+        display: flex
+        justify-content: space-evenly
+        .client
+            width: 18%
 
 #description
     grid-area: description
-    min-height: 900px
-    background-color: lightblue
+    background-color: $lgrey
+    display: grid
+    grid-template-columns: 3fr 6fr
+    margin-top: 3rem
+    +breakpoint-tablet()
+        grid-template-columns: 1fr
+    
+    .left
+        +breakpoint-tablet()
+            grid-row: 2 / 3
+        img
+            display: block
+            width: 80%
+            max-width: 450px
+            margin: 30px auto
+            margin-top: 60px
+            margin-bottom: 70px
+    .right
+        padding-left: 70px
+        padding-right: 70px
+        h2
+            margin-top: 6rem
+        p
+            font-size: 1.4rem
+            margin-bottom: 5rem
+            +breakpoint-tablet()
+                margin-bottom: 0

@@ -1,11 +1,24 @@
-@mixin breakpoint-mobile
+//Media Queries
+=breakpoint-mobile()
     @media only screen and (max-width: $xs)
         @content
 
-@mixin breakpoint-tablet
+=breakpoint-tablet()
     @media only screen and (max-width: $sm)
         @content
 
-@mixin breakpoint-smlaptops
+=breakpoint-smlaptops()
     @media only screen and (max-width: $md)
         @content
+
+//Styles
+=border($rad, $shadow, $border)
+    -webkit-box-radius: $rad
+    -moz-border-radius: $rad
+    border-radius: $rad
+
+    -webkit-box-shadow: $shadow
+    -moz-box-shadow: $shadow
+    box-shadow: $shadow
+
+    border: $border
