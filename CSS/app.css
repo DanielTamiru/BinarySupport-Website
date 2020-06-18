@@ -2,54 +2,55 @@ h1, h2, h3 {
   color: #b48f30da;
   font-weight: bold; }
 
-.container-fluid {
-  padding: 0; }
-
-#home-content, #services-content, #about-content, #contact-content {
+#home-container, #services-container, #about-container, #contact-container {
   display: grid;
   padding: 0;
-  grid-template-columns: 1fr;
   margin: 0 auto;
+  grid-template-columns: 1fr;
   grid-template-areas: "header" "intro" "clients" "description" "footer";
   background-color: white;
   font-family: Verdana, Geneva, sans-serif;
   color: black; }
 
-#services-content {
-  grid-template-columns: "header" "services" "footer"; }
+.navbar-block {
+  background-color: black;
+  height: 56px; }
 
-#about-content {
-  grid-template-columns: "header" "info" "footer"; }
+#services-container {
+  grid-template-columns: "header" "content" "footer"; }
 
-#contact-content {
-  grid-template-columns: "header" "contact-info" "footer"; }
+#about-container {
+  grid-template-columns: "header" "content" "footer"; }
+
+#contact-container {
+  grid-template-columns: "header" "content" "footer"; }
 
 header {
   grid-area: header;
   background-color: #8db5a3; }
 
-#intro {
+#home-intro {
   grid-area: intro;
   display: grid;
   gap: inherit;
   grid-template-columns: 6fr 5fr;
   background-color: #8db5a3;
-  margin-top: 3rem;
+  margin-top: 0 auto;
   color: white; }
   @media only screen and (max-width: 768px) {
-    #intro {
+    #home-intro {
       grid-template-columns: 1fr; } }
-  #intro .left {
+  #home-intro .left {
     padding: 150px 0% 60px 20%;
     margin: 0 auto; }
     @media only screen and (max-width: 768px) {
-      #intro .left {
+      #home-intro .left {
         padding: 100px 10% 30px 10%; } }
-    #intro .left h1 {
+    #home-intro .left h1 {
       font-size: 3.2rem; }
-  #intro .right {
+  #home-intro .right {
     padding: 50px 10% 80px 10%; }
-    #intro .right .preview-box {
+    #home-intro .right .preview-box {
       background-color: inherit;
       width: 75%;
       display: block;
@@ -62,19 +63,19 @@ header {
       -moz-box-shadow: 0 0 8px #666;
       box-shadow: 0 0 8px #666;
       border: 1px solid inherit; }
-      #intro .right .preview-box h2 {
+      #home-intro .right .preview-box h2 {
         padding-top: 2rem;
         text-align: center;
         color: white; }
-      #intro .right .preview-box img {
+      #home-intro .right .preview-box img {
         width: 90%;
         display: block;
         margin: 30px auto; }
-  #intro button {
+  #home-intro button {
     background-color: #b48f30da;
     border: none;
     margin-bottom: 30px; }
-    #intro button:hover {
+    #home-intro button:hover {
       background-color: rgba(168, 133, 45, 0.8549019608); }
 
 #client-list {
@@ -90,49 +91,49 @@ header {
     #client-list .company-wrapper .client {
       width: 18%; }
 
-#description {
+#home-description {
   grid-area: description;
   background-color: #e8e8e8;
   display: grid;
   grid-template-columns: 3fr 6fr;
   margin-top: 3rem; }
   @media only screen and (max-width: 992px) {
-    #description {
+    #home-description {
       grid-template-columns: 1fr; } }
   @media only screen and (max-width: 992px) {
-    #description .left {
+    #home-description .left {
       grid-row: 2/3; } }
-  #description .left img {
+  #home-description .left img {
     display: block;
     width: 80%;
     max-width: 450px;
     margin: 30px auto;
     margin-top: 60px;
     margin-bottom: 70px; }
-  #description .right {
+  #home-description .right {
     padding-left: 70px;
     padding-right: 70px; }
-    #description .right h2 {
+    #home-description .right h2 {
       margin-top: 6rem; }
-    #description .right p {
+    #home-description .right p {
       font-size: 1.4rem;
       margin-bottom: 5rem; }
       @media only screen and (max-width: 992px) {
-        #description .right p {
+        #home-description .right p {
           margin-bottom: 0; } }
 
-#services-container {
-  grid-area: "services";
+#services-content {
+  grid-area: "content";
   background-color: #8db5a3;
   min-height: 900px; }
 
-#about-info {
-  grid-area: "info";
+#about-content {
+  grid-area: "content";
   background-color: #8db5a3;
   min-height: 900px; }
 
-#contact-info {
-  grid-area: "contact-info";
+#contact-content {
+  grid-area: "content";
   background-color: #8db5a3;
   min-height: 900px; }
 

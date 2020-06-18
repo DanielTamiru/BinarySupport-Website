@@ -1,11 +1,11 @@
 
-#intro
+#home-intro
     grid-area: intro
     display: grid
     gap: inherit
     grid-template-columns: 6fr 5fr
     background-color: $primary
-    margin-top: 3rem
+    margin-top: 0 auto
     color: white
     
     +breakpoint-mobile()
@@ -39,8 +39,6 @@
                 width: 90%
                 display: block
                 margin: 30px auto
-            
-    
     
     button
         background-color: $accent
@@ -62,7 +60,7 @@
         .client
             width: 18%
 
-#description
+#home-description
     grid-area: description
     background-color: $lgrey
     display: grid
@@ -92,18 +90,17 @@
             +breakpoint-tablet()
                 margin-bottom: 0
 
-
-#services-container
-    grid-area: "services"
+#services-content
+    grid-area: "content"
     background-color: $primary
     min-height: 900px
 
-#about-info
-    grid-area: "info"
+#about-content
+    grid-area: "content"
     background-color: $primary
     min-height: 900px
 
-#contact-info
-    grid-area: "contact-info"
+#contact-content
+    grid-area: "content"
     background-color: $primary
     min-height: 900px

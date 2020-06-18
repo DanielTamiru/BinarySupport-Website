@@ -1,27 +1,30 @@
 h1, h2, h3
     color: $accent
     font-weight: bold
-.container-fluid
-    padding: 0
 
-#home-content
+
+#home-container
     display: grid
     padding: 0
-    grid-template-columns: 1fr
     margin: 0 auto
+    grid-template-columns: 1fr
     grid-template-areas: "header" "intro" "clients" "description" "footer"
     background-color: white
     font-family: $default-font
     color: black
+
+.navbar-block
+    background-color: black
+    height: 56px
     
-#services-content
-    @extend #home-content
-    grid-template-columns: "header" "services" "footer"
+#services-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
 
-#about-content
-    @extend #home-content
-    grid-template-columns: "header" "info" "footer"
+#about-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
 
-#contact-content
-    @extend #home-content
-    grid-template-columns: "header" "contact-info" "footer"
+#contact-container
+    @extend #home-container
+    grid-template-columns: "header" "content" "footer"
