@@ -1,14 +1,17 @@
-h1, h2, h3
-    color: $accent
+h1
+    color: $primary
     font-weight: bold
 
+h2, h3, h4
+    color: $accent
+    font-weight: bold
 
 #home-container
     display: grid
     padding: 0
     margin: 0 auto
     grid-template-columns: 1fr
-    grid-template-areas: "header" "intro" "clients" "description" "footer"
+    grid-template-areas: "header" "carousel" "intro" "clients" "description" "footer"
     background-color: white
     font-family: $default-font
     color: black
@@ -28,3 +31,10 @@ h1, h2, h3
 #contact-container
     @extend #home-container
     grid-template-columns: "header" "content" "footer"
+
+.primary-button
+    +standard-button($primary)
+
+.secondary-button
+    +standard-button($accent)
+    

@@ -22,3 +22,25 @@
     box-shadow: $shadow
 
     border: $border
+
+//Carousel
+=carousel-text($width, $left, $top)
+    position: absolute
+    width: $width
+    left: $left
+    top: $top
+    +breakpoint-tablet()
+        position: static
+        width: 100%
+        margin: 0 auto
+        margin-top: 2rem
+        padding: 0 5px 0
+
+=standard-button($color)
+    background-color: $color
+    color: white
+    border: none 
+    &:hover, &:active
+        background-color: darken($color, 4%)
+        color: white
+

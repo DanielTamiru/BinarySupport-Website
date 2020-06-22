@@ -1,4 +1,8 @@
-h1, h2, h3 {
+h1 {
+  color: #8db5a3;
+  font-weight: bold; }
+
+h2, h3, h4 {
   color: #b48f30da;
   font-weight: bold; }
 
@@ -7,7 +11,7 @@ h1, h2, h3 {
   padding: 0;
   margin: 0 auto;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "intro" "clients" "description" "footer";
+  grid-template-areas: "header" "carousel" "intro" "clients" "description" "footer";
   background-color: white;
   font-family: Verdana, Geneva, sans-serif;
   color: black; }
@@ -25,18 +29,37 @@ h1, h2, h3 {
 #contact-container {
   grid-template-columns: "header" "content" "footer"; }
 
+.primary-button {
+  background-color: #8db5a3;
+  color: white;
+  border: none; }
+  .primary-button:hover, .primary-button:active {
+    background-color: #81ad99;
+    color: white; }
+
+.secondary-button {
+  background-color: #b48f30da;
+  color: white;
+  border: none; }
+  .secondary-button:hover, .secondary-button:active {
+    background-color: rgba(164, 130, 44, 0.8549019608);
+    color: white; }
+
 header {
   grid-area: header;
   background-color: #8db5a3; }
+
+#HomeCarousel {
+  grid-area: carousel; }
 
 #home-intro {
   grid-area: intro;
   display: grid;
   gap: inherit;
   grid-template-columns: 6fr 5fr;
-  background-color: #8db5a3;
+  background-color: #e8e8e8fb;
   margin-top: 0 auto;
-  color: white; }
+  color: black; }
   @media only screen and (max-width: 768px) {
     #home-intro {
       grid-template-columns: 1fr; } }
@@ -48,35 +71,15 @@ header {
         padding: 100px 10% 30px 10%; } }
     #home-intro .left h1 {
       font-size: 3.2rem; }
+    #home-intro .left h4 {
+      font-weight: normal;
+      color: black; }
   #home-intro .right {
     padding: 50px 10% 80px 10%; }
-    #home-intro .right .preview-box {
-      background-color: inherit;
-      width: 75%;
-      display: block;
-      text-align: center;
-      margin: 0 auto;
-      -webkit-box-radius: 0;
-      -moz-border-radius: 0;
-      border-radius: 0;
-      -webkit-box-shadow: 0 0 8px #666;
-      -moz-box-shadow: 0 0 8px #666;
-      box-shadow: 0 0 8px #666;
-      border: 1px solid inherit; }
-      #home-intro .right .preview-box h2 {
-        padding-top: 2rem;
-        text-align: center;
-        color: white; }
-      #home-intro .right .preview-box img {
-        width: 90%;
-        display: block;
-        margin: 30px auto; }
-  #home-intro button {
-    background-color: #b48f30da;
-    border: none;
-    margin-bottom: 30px; }
-    #home-intro button:hover {
-      background-color: rgba(168, 133, 45, 0.8549019608); }
+    #home-intro .right h2 {
+      color: black; }
+    #home-intro .right button {
+      margin-bottom: 30px; }
 
 #client-list {
   grid-area: clients;
@@ -93,7 +96,7 @@ header {
 
 #home-description {
   grid-area: description;
-  background-color: #e8e8e8;
+  background-color: #e8e8e8fb;
   display: grid;
   grid-template-columns: 3fr 6fr;
   margin-top: 3rem; }
@@ -109,12 +112,14 @@ header {
     max-width: 450px;
     margin: 30px auto;
     margin-top: 60px;
-    margin-bottom: 70px; }
+    margin-bottom: 70px;
+    width: 60%; }
   #home-description .right {
     padding-left: 70px;
     padding-right: 70px; }
     #home-description .right h2 {
-      margin-top: 6rem; }
+      margin-top: 6rem;
+      color: #8db5a3; }
     #home-description .right p {
       font-size: 1.4rem;
       margin-bottom: 5rem; }
@@ -177,6 +182,10 @@ footer {
 
 .navbar .nav-item {
   margin: 0 6px 0; }
+.navbar .navbar-toggler {
+  border: none; }
+  .navbar .navbar-toggler:focus {
+    outline: none; }
 
 .modal-body .fine-print {
   color: gray;
@@ -189,5 +198,104 @@ footer {
     background-color: #7aa994; }
 .modal-footer .close-btn {
   border: none; }
+
+.media-box {
+  background-color: inherit;
+  color: inherit;
+  width: 75%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  -webkit-box-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: 0 0 8px #666;
+  -moz-box-shadow: 0 0 8px #666;
+  box-shadow: 0 0 8px #666;
+  border: 1px solid inherit; }
+  @media only screen and (max-width: 768px) {
+    .media-box {
+      width: 94%; } }
+  .media-box h2 {
+    padding-top: 2rem;
+    text-align: center;
+    color: #b48f30da; }
+  .media-box .media {
+    width: 90%;
+    display: block;
+    margin: 30px auto; }
+
+.carousel-control-prev, .carousel-control-next {
+  top: 85%;
+  width: 35px;
+  height: 35px;
+  z-index: 2;
+  border-radius: 50%;
+  padding: 6px;
+  background-color: rgba(90, 90, 90, 0.6); }
+  .carousel-control-prev:focus, .carousel-control-next:focus {
+    opacity: 0.5; }
+
+.carousel-control-prev {
+  left: 40px; }
+
+.carousel-control-next {
+  left: 110px; }
+
+#HomeCarousel .carousel-item {
+  background-color: #8db5a3; }
+  #HomeCarousel .carousel-item .slide-one-text {
+    position: absolute;
+    width: 40%;
+    left: 2%;
+    top: 8%; }
+    @media only screen and (max-width: 992px) {
+      #HomeCarousel .carousel-item .slide-one-text {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: 0 5px 0; } }
+    #HomeCarousel .carousel-item .slide-one-text h1 {
+      font-size: 4.8rem;
+      color: white; }
+    @media only screen and (max-width: 992px) {
+      #HomeCarousel .carousel-item .slide-one-text {
+        height: 200px; }
+        #HomeCarousel .carousel-item .slide-one-text h1 {
+          font-size: 3.8rem; } }
+    #HomeCarousel .carousel-item .slide-one-text .punchline {
+      color: #b48f30da; }
+  #HomeCarousel .carousel-item .slide-two-text {
+    position: absolute;
+    width: 38%;
+    left: 55%;
+    top: 30%; }
+    @media only screen and (max-width: 992px) {
+      #HomeCarousel .carousel-item .slide-two-text {
+        position: static;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 2rem;
+        padding: 0 5px 0; } }
+    @media only screen and (max-width: 992px) {
+      #HomeCarousel .carousel-item .slide-two-text {
+        height: 200px; }
+        #HomeCarousel .carousel-item .slide-two-text h2 {
+          font-size: 2.9rem; } }
+    #HomeCarousel .carousel-item .slide-two-text h4 {
+      color: white;
+      font-size: 2rem; }
+    #HomeCarousel .carousel-item .slide-two-text h2 {
+      font-size: 2.9rem; }
+    #HomeCarousel .carousel-item .slide-two-text h5 {
+      font-size: 1.6rem;
+      color: white; }
+  #HomeCarousel .carousel-item img {
+    padding: 100px 7% 0 7%; }
+  #HomeCarousel .carousel-item .slide-one-img {
+    float: right; }
+  #HomeCarousel .carousel-item .slide-two-img {
+    float: left; }
 
 /*# sourceMappingURL=app.css.map */

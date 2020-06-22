@@ -1,12 +1,14 @@
 
+#HomeCarousel
+    grid-area: carousel
 #home-intro
     grid-area: intro
     display: grid
     gap: inherit
     grid-template-columns: 6fr 5fr
-    background-color: $primary
+    background-color: $lgrey
     margin-top: 0 auto
-    color: white
+    color: black
     
     +breakpoint-mobile()
         grid-template-columns: 1fr
@@ -20,32 +22,17 @@
         h1
             font-size: 3.2rem
             //-webkit-text-stroke: 1px white
+        h4
+            font-weight: normal
+            color: black
         
     .right
         padding: 50px 10% 80px 10%
-        .preview-box
-            background-color: inherit
-            width: 75%
-            display: block
-            text-align: center
-            margin: 0 auto
-            +border(0, 0 0 8px #666, 1px solid inherit)
-
-            h2
-                padding-top: 2rem
-                text-align: center
-                color: white
-            img
-                width: 90%
-                display: block
-                margin: 30px auto
-    
-    button
-        background-color: $accent
-        border: none 
-        margin-bottom: 30px 
-        &:hover
-            background-color: darken($accent, 3%)
+        h2
+            color: black
+        button
+            margin-bottom: 30px
+            
 
 #client-list
     grid-area: clients
@@ -79,11 +66,14 @@
             margin: 30px auto
             margin-top: 60px
             margin-bottom: 70px
+            +breakpoint-tablet()
+            width: 60%
     .right
         padding-left: 70px
         padding-right: 70px
         h2
             margin-top: 6rem
+            color: $primary
         p
             font-size: 1.4rem
             margin-bottom: 5rem
