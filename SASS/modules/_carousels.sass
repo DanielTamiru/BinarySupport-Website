@@ -10,6 +10,8 @@
     background-color: rgba(90, 90, 90, 0.6)
     &:focus
         opacity: 0.5
+    &:hover
+        opacity: 0.9
 
 .carousel-control-prev
     left: 40px
@@ -31,20 +33,36 @@
             .punchline
                 color: $accent
         .slide-two-text
-            +carousel-text(38%, 55%, 30%)
-            +breakpoint-tablet()
-                height: 200px
-                h2
-                    font-size: 2.9rem
+            +carousel-text(50%, 52%, 30%)
             h4
                 color: white
-                font-size: 2rem
+                font-size: 2.4rem
             h2
-                font-size: 2.9rem
-            h5
-                font-size: 1.6rem
-                color: white
-    
+                font-size: 4.5rem
+                margin-left: -10px
+            h5, i
+                display: inline-block
+                margin-left: 8px
+                font-size: 1.3rem
+                color: $dark-primary
+                transition: all .3s ease-in-out
+                text-shadow: 1px 1px 2px #818181
+                &:hover + i 
+                    position: relative
+                    +translate(15px, 0)
+                    
+                
+            +breakpoint-tablet()
+                padding-top: 6rem
+                height: 200px
+                padding: 40px
+                h2
+                    font-size: 4rem
+            +breakpoint-mobile()
+                padding-top: 6.8rem
+                h2
+                    font-size: 2.5rem
+            
         img
             padding: 100px 7% 0 7%
         .slide-one-img

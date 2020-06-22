@@ -6,6 +6,9 @@ h2, h3, h4 {
   color: #b48f30da;
   font-weight: bold; }
 
+a:hover {
+  text-decoration: none; }
+
 #home-container, #services-container, #about-container, #contact-container {
   display: grid;
   padding: 0;
@@ -30,19 +33,19 @@ h2, h3, h4 {
   grid-template-columns: "header" "content" "footer"; }
 
 .primary-button {
-  background-color: #8db5a3;
-  color: white;
-  border: none; }
+  background-color: inherit;
+  border: 2px solid #8db5a3;
+  color: #8db5a3; }
   .primary-button:hover, .primary-button:active {
-    background-color: #81ad99;
+    background-color: #8db5a3;
     color: white; }
 
 .secondary-button {
-  background-color: #b48f30da;
-  color: white;
-  border: none; }
+  background-color: inherit;
+  border: 2px solid #b48f30da;
+  color: #b48f30da; }
   .secondary-button:hover, .secondary-button:active {
-    background-color: rgba(164, 130, 44, 0.8549019608);
+    background-color: #b48f30da;
     color: white; }
 
 header {
@@ -57,7 +60,7 @@ header {
   display: grid;
   gap: inherit;
   grid-template-columns: 6fr 5fr;
-  background-color: #e8e8e8fb;
+  background-color: #f3f7fc;
   margin-top: 0 auto;
   color: black; }
   @media only screen and (max-width: 768px) {
@@ -76,27 +79,48 @@ header {
       color: black; }
   #home-intro .right {
     padding: 50px 10% 80px 10%; }
-    #home-intro .right h2 {
-      color: black; }
     #home-intro .right button {
       margin-bottom: 30px; }
 
 #client-list {
   grid-area: clients;
   background-color: white; }
-  #client-list h5 {
+  #client-list h4 {
+    margin-top: 60px;
+    margin-bottom: 15px;
     text-align: center;
     font-weight: bold;
-    padding: 2rem 0 2rem; }
-  #client-list .company-wrapper {
-    display: flex;
-    justify-content: space-evenly; }
-    #client-list .company-wrapper .client {
-      width: 18%; }
+    font-size: 2rem; }
+  #client-list hr {
+    width: min(100px, 25%);
+    margin: 0 auto;
+    border: none;
+    border-radius: 3px;
+    height: 5px;
+    background-color: #e3ecf8; }
+  #client-list .companies-wrapper {
+    padding: 30px 15% 0;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 35px; }
+    @media only screen and (max-width: 1200px) {
+      #client-list .companies-wrapper {
+        grid-template-columns: repeat(4, 1fr); } }
+    @media only screen and (max-width: 992px) {
+      #client-list .companies-wrapper {
+        grid-template-columns: repeat(3, 1fr); } }
+    @media only screen and (max-width: 768px) {
+      #client-list .companies-wrapper {
+        grid-template-columns: repeat(2, 1fr); } }
+    #client-list .companies-wrapper .client {
+      text-align: center;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
 
 #home-description {
   grid-area: description;
-  background-color: #e8e8e8fb;
+  background-color: #f3f7fc;
   display: grid;
   grid-template-columns: 3fr 6fr;
   margin-top: 3rem; }
@@ -119,6 +143,7 @@ header {
     padding-right: 70px; }
     #home-description .right h2 {
       margin-top: 6rem;
+      font-size: 2.6rem;
       color: #8db5a3; }
     #home-description .right p {
       font-size: 1.4rem;
@@ -138,9 +163,45 @@ header {
   min-height: 900px; }
 
 #contact-content {
-  grid-area: "content";
-  background-color: #8db5a3;
-  min-height: 900px; }
+  grid-area: "content"; }
+  #contact-content .landscape-wrapper {
+    background-color: #8db5a3;
+    max-height: 500px;
+    overflow: hidden; }
+    #contact-content .landscape-wrapper img {
+      width: 100%;
+      opacity: 0.3; }
+    #contact-content .landscape-wrapper .contact-banner {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      z-index: 1;
+      top: 220px; }
+      #contact-content .landscape-wrapper .contact-banner h1 {
+        color: white;
+        font-size: 4.5rem; }
+      #contact-content .landscape-wrapper .contact-banner h5 {
+        color: white;
+        font-size: 1rem; }
+      #contact-content .landscape-wrapper .contact-banner button {
+        background-color: white; }
+      @media only screen and (max-width: 992px) {
+        #contact-content .landscape-wrapper .contact-banner {
+          top: 180px; }
+          #contact-content .landscape-wrapper .contact-banner h1 {
+            font-size: 4rem; } }
+      @media only screen and (max-width: 768px) {
+        #contact-content .landscape-wrapper .contact-banner {
+          top: 120px; }
+          #contact-content .landscape-wrapper .contact-banner h1 {
+            font-size: 3.5rem; } }
+  #contact-content .contact-info {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px; }
+    @media only screen and (max-width: 768px) {
+      #contact-content .contact-info {
+        display: block; } }
 
 footer {
   grid-area: footer;
@@ -199,10 +260,10 @@ footer {
 .modal-footer .close-btn {
   border: none; }
 
-.media-box {
+.media-box, .contact-card {
   background-color: inherit;
   color: inherit;
-  width: 75%;
+  width: 85%;
   display: block;
   text-align: center;
   margin: 0 auto;
@@ -214,16 +275,33 @@ footer {
   box-shadow: 0 0 8px #666;
   border: 1px solid inherit; }
   @media only screen and (max-width: 768px) {
-    .media-box {
+    .media-box, .contact-card {
       width: 94%; } }
-  .media-box h2 {
+  .media-box h2, .contact-card h2 {
     padding-top: 2rem;
     text-align: center;
     color: #b48f30da; }
-  .media-box .media {
+  .media-box .media, .contact-card .media {
     width: 90%;
     display: block;
     margin: 30px auto; }
+
+.contact-card {
+  margin-top: -50px;
+  padding: 20px;
+  z-index: 1;
+  background-color: white;
+  width: 40%; }
+  .contact-card i, .contact-card h5 + p, .contact-card p + h3, .contact-card p + button {
+    margin-top: 30px; }
+  .contact-card i {
+    color: #8db5a3; }
+  .contact-card h5 {
+    font-weight: bold; }
+  @media only screen and (max-width: 768px) {
+    .contact-card {
+      width: 94%;
+      margin-top: 45px; } }
 
 .carousel-control-prev, .carousel-control-next {
   top: 85%;
@@ -235,6 +313,8 @@ footer {
   background-color: rgba(90, 90, 90, 0.6); }
   .carousel-control-prev:focus, .carousel-control-next:focus {
     opacity: 0.5; }
+  .carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 0.9; }
 
 .carousel-control-prev {
   left: 40px; }
@@ -268,8 +348,8 @@ footer {
       color: #b48f30da; }
   #HomeCarousel .carousel-item .slide-two-text {
     position: absolute;
-    width: 38%;
-    left: 55%;
+    width: 50%;
+    left: 52%;
     top: 30%; }
     @media only screen and (max-width: 992px) {
       #HomeCarousel .carousel-item .slide-two-text {
@@ -278,19 +358,38 @@ footer {
         margin: 0 auto;
         margin-top: 2rem;
         padding: 0 5px 0; } }
-    @media only screen and (max-width: 992px) {
-      #HomeCarousel .carousel-item .slide-two-text {
-        height: 200px; }
-        #HomeCarousel .carousel-item .slide-two-text h2 {
-          font-size: 2.9rem; } }
     #HomeCarousel .carousel-item .slide-two-text h4 {
       color: white;
-      font-size: 2rem; }
+      font-size: 2.4rem; }
     #HomeCarousel .carousel-item .slide-two-text h2 {
-      font-size: 2.9rem; }
-    #HomeCarousel .carousel-item .slide-two-text h5 {
-      font-size: 1.6rem;
-      color: white; }
+      font-size: 4.5rem;
+      margin-left: -10px; }
+    #HomeCarousel .carousel-item .slide-two-text h5, #HomeCarousel .carousel-item .slide-two-text i {
+      display: inline-block;
+      margin-left: 8px;
+      font-size: 1.3rem;
+      color: #324e41;
+      transition: all 0.3s ease-in-out;
+      text-shadow: 1px 1px 2px #818181; }
+      #HomeCarousel .carousel-item .slide-two-text h5:hover + i, #HomeCarousel .carousel-item .slide-two-text i:hover + i {
+        position: relative;
+        -webkit-transform: translate(15px, 0);
+        -moz-transform: translate(15px, 0);
+        -o-transform: translate(15px, 0);
+        -ms-transform: translate(15px, 0);
+        transform: translate(15px, 0); }
+    @media only screen and (max-width: 992px) {
+      #HomeCarousel .carousel-item .slide-two-text {
+        padding-top: 6rem;
+        height: 200px;
+        padding: 40px; }
+        #HomeCarousel .carousel-item .slide-two-text h2 {
+          font-size: 4rem; } }
+    @media only screen and (max-width: 768px) {
+      #HomeCarousel .carousel-item .slide-two-text {
+        padding-top: 6.8rem; }
+        #HomeCarousel .carousel-item .slide-two-text h2 {
+          font-size: 2.5rem; } }
   #HomeCarousel .carousel-item img {
     padding: 100px 7% 0 7%; }
   #HomeCarousel .carousel-item .slide-one-img {

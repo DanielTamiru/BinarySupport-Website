@@ -7,7 +7,7 @@
     @media only screen and (max-width: $sm)
         @content
 
-=breakpoint-smlaptops()
+=breakpoint-smlaptop()
     @media only screen and (max-width: $md)
         @content
 
@@ -37,10 +37,22 @@
         padding: 0 5px 0
 
 =standard-button($color)
-    background-color: $color
-    color: white
-    border: none 
+    background-color: inherit
+    border: 2px solid $color
+    color: $color
     &:hover, &:active
-        background-color: darken($color, 4%)
+        background-color: $color
         color: white
 
+=translate($right, $up)
+    -webkit-transform: translate($right,$up)
+    -moz-transform: translate($right,$up)
+    -o-transform: translate($right,$up)
+    -ms-transform: translate($right,$up)
+    transform: translate($right,$up)
+
+=center-vertically()
+    position: relative
+    top: 50%
+    transform: translateY(-50%)
+    

@@ -28,8 +28,6 @@
         
     .right
         padding: 50px 10% 80px 10%
-        h2
-            color: black
         button
             margin-bottom: 30px
             
@@ -37,15 +35,36 @@
 #client-list
     grid-area: clients
     background-color: white
-    h5
+    h4
+        margin-top: 60px
+        margin-bottom: 15px
         text-align: center
         font-weight: bold
-        padding: 2rem 0 2rem
-    .company-wrapper
-        display: flex
-        justify-content: space-evenly
+        font-size: 2rem
+    hr
+        width: min(100px, 25%)
+        margin: 0 auto
+        border: none
+        border-radius: 3px
+        height: 5px
+        background-color: darken($lgrey, 4%)
+    .companies-wrapper
+        padding: 30px 15% 0
+        display: grid
+        grid-template-columns: repeat(5, 1fr)
+        column-gap: 35px
+        +breakpoint-smlaptop()
+            grid-template-columns: repeat(4, 1fr)
+        +breakpoint-tablet()
+            grid-template-columns: repeat(3, 1fr)
+        +breakpoint-mobile()
+            grid-template-columns: repeat(2, 1fr)
         .client
-            width: 18%
+            text-align: center
+            +center-vertically()
+
+
+
 
 #home-description
     grid-area: description
@@ -73,6 +92,7 @@
         padding-right: 70px
         h2
             margin-top: 6rem
+            font-size: 2.6rem
             color: $primary
         p
             font-size: 1.4rem
@@ -92,5 +112,48 @@
 
 #contact-content
     grid-area: "content"
-    background-color: $primary
-    min-height: 900px
+    .landscape-wrapper
+        background-color: $primary
+        max-height: 500px
+        overflow: hidden
+        img
+            width: 100%
+            opacity: 0.3
+        .contact-banner
+            width: 100%
+            text-align: center
+            position: absolute
+            z-index: 1
+            top: 220px
+            h1
+                color: white
+                font-size: 4.5rem
+
+            h5         
+                color: white        
+                font-size: 1rem
+            button
+                background-color: white
+            +breakpoint-tablet()
+                h1
+                    font-size: 4rem
+                top: 180px
+            +breakpoint-mobile()
+                h1
+                    font-size: 3.5rem
+                top: 120px
+            
+    .contact-info
+        display: flex
+        justify-content: center
+        margin-bottom: 80px
+        +breakpoint-mobile()
+            display: block
+
+            
+
+        
+
+
+
+            
