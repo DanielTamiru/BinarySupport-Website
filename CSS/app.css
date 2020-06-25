@@ -4,10 +4,22 @@ h1 {
 
 h2, h3, h4 {
   color: #b48f30da;
-  font-weight: bold; }
+  font-weight: 549; }
 
-a:hover {
-  text-decoration: none; }
+a, button {
+  cursor: grab; }
+  a:focus, button:focus {
+    outline: none; }
+
+article {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2; }
+  @media only screen and (max-width: 768px) {
+    article {
+      -webkit-column-count: 1;
+      -moz-column-count: 1;
+      column-count: 1; } }
 
 #home-container, #services-container, #about-container, #contact-container {
   display: grid;
@@ -51,9 +63,6 @@ a:hover {
 header {
   grid-area: header;
   background-color: #8db5a3; }
-
-#HomeCarousel {
-  grid-area: carousel; }
 
 #home-intro {
   grid-area: intro;
@@ -158,9 +167,139 @@ header {
   min-height: 900px; }
 
 #about-content {
-  grid-area: "content";
-  background-color: #8db5a3;
-  min-height: 900px; }
+  grid-area: "content"; }
+  #about-content .mission-wrapper {
+    text-align: center;
+    padding: 110px 20% 45px; }
+    #about-content .mission-wrapper h1 {
+      font-size: 2rem; }
+    #about-content .mission-wrapper h4 {
+      margin-top: 30px;
+      color: black;
+      font-size: 1.5rem;
+      font-weight: 549; }
+    @media only screen and (max-width: 768px) {
+      #about-content .mission-wrapper {
+        padding-left: 0;
+        paddding-right: 0; }
+        #about-content .mission-wrapper h4 {
+          font-size: 2.5rem; } }
+    @media only screen and (max-width: 992px) {
+      #about-content .mission-wrapper {
+        padding-left: 10%;
+        paddding-right: 10%; }
+        #about-content .mission-wrapper h4 {
+          font-size: 1.8rem; } }
+    @media only screen and (max-width: 1200px) {
+      #about-content .mission-wrapper {
+        padding-left: 18%;
+        paddding-right: 18%; }
+        #about-content .mission-wrapper h4 {
+          font-size: 1.6rem; } }
+  #about-content .focus-icons {
+    background-color: #f3f7fc;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 70px 10% 70px; }
+    #about-content .focus-icons .icon {
+      color: #8db5a3;
+      font-size: 4rem;
+      text-align: center; }
+      #about-content .focus-icons .icon i {
+        display: inline-block;
+        text-align: center;
+        -webkit-box-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        padding: 30px;
+        background-color: inherit;
+        border: 6px solid #8db5a3; }
+      #about-content .focus-icons .icon h3 {
+        padding-top: 5px;
+        font-size: 1.3rem; }
+      #about-content .focus-icons .icon h6 {
+        color: black;
+        font-size: 0.9rem;
+        width: 130px;
+        margin: 0 auto; }
+    @media only screen and (max-width: 768px) {
+      #about-content .focus-icons {
+        display: block; }
+        #about-content .focus-icons .icon + .icon {
+          margin-top: 30px; } }
+  #about-content .team-wrapper {
+    background-color: #8db5a3;
+    position: relative;
+    overflow: hidden; }
+    #about-content .team-wrapper .bg {
+      position: absolute;
+      opacity: 0.1;
+      z-index: 0; }
+    #about-content .team-wrapper .portrait {
+      display: block;
+      width: 30%;
+      padding-top: 130px;
+      margin-left: min(20%, 600px);
+      position: relative; }
+      @media only screen and (max-width: 768px) {
+        #about-content .team-wrapper .portrait {
+          margin: auto;
+          padding-top: 350px;
+          width: max(30%, 300px); } }
+    #about-content .team-wrapper .dad-description {
+      position: absolute;
+      width: 48%;
+      left: 47%;
+      top: 10%;
+      z-index: 2; }
+      @media only screen and (max-width: 768px) {
+        #about-content .team-wrapper .dad-description {
+          left: 5%;
+          top: 7%;
+          width: 90%; } }
+      #about-content .team-wrapper .dad-description h3 {
+        font-weight: bold;
+        font-size: 2.2rem; }
+      #about-content .team-wrapper .dad-description h5 {
+        font-weight: 549;
+        color: white;
+        font-size: 1.5rem; }
+        @media only screen and (max-width: 992px) {
+          #about-content .team-wrapper .dad-description h5 {
+            font-size: 1.3rem; } }
+      #about-content .team-wrapper .dad-description p {
+        color: white;
+        font-size: 1.3rem; }
+        @media only screen and (max-width: 992px) {
+          #about-content .team-wrapper .dad-description p {
+            font-size: 1.1rem; } }
+      #about-content .team-wrapper .dad-description hr {
+        width: min(100px, 25%);
+        margin: 0 auto;
+        border: none;
+        border-radius: 3px;
+        height: 5px;
+        background-color: whitesmoke;
+        margin: 0;
+        margin-bottom: 5px; }
+  #about-content .company-history {
+    width: 93%;
+    margin: 0 auto;
+    padding: 100px 100px; }
+    #about-content .company-history h2 {
+      font-size: 2.7rem;
+      padding-bottom: 8px; }
+      @media only screen and (max-width: 768px) {
+        #about-content .company-history h2 {
+          padding-bottom: 16px; } }
+    #about-content .company-history p {
+      font-size: 1.1rem;
+      line-height: 1.7rem; }
+    @media only screen and (max-width: 768px) {
+      #about-content .company-history {
+        padding-left: 50px;
+        padding-right: 50px; } }
 
 #contact-content {
   grid-area: "content"; }
@@ -183,8 +322,6 @@ header {
       #contact-content .landscape-wrapper .contact-banner h5 {
         color: white;
         font-size: 1rem; }
-      #contact-content .landscape-wrapper .contact-banner button {
-        background-color: white; }
       @media only screen and (max-width: 992px) {
         #contact-content .landscape-wrapper .contact-banner {
           top: 180px; }
@@ -322,79 +459,81 @@ footer {
 .carousel-control-next {
   left: 110px; }
 
-#HomeCarousel .carousel-item {
-  background-color: #8db5a3; }
-  #HomeCarousel .carousel-item .slide-one-text {
-    position: absolute;
-    width: 40%;
-    left: 2%;
-    top: 8%; }
-    @media only screen and (max-width: 992px) {
-      #HomeCarousel .carousel-item .slide-one-text {
-        position: static;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 2rem;
-        padding: 0 5px 0; } }
-    #HomeCarousel .carousel-item .slide-one-text h1 {
-      font-size: 4.8rem;
-      color: white; }
-    @media only screen and (max-width: 992px) {
-      #HomeCarousel .carousel-item .slide-one-text {
-        height: 200px; }
-        #HomeCarousel .carousel-item .slide-one-text h1 {
-          font-size: 3.8rem; } }
-    #HomeCarousel .carousel-item .slide-one-text .punchline {
-      color: #b48f30da; }
-  #HomeCarousel .carousel-item .slide-two-text {
-    position: absolute;
-    width: 50%;
-    left: 52%;
-    top: 30%; }
-    @media only screen and (max-width: 992px) {
-      #HomeCarousel .carousel-item .slide-two-text {
-        position: static;
-        width: 100%;
-        margin: 0 auto;
-        margin-top: 2rem;
-        padding: 0 5px 0; } }
-    #HomeCarousel .carousel-item .slide-two-text h4 {
-      color: white;
-      font-size: 2.4rem; }
-    #HomeCarousel .carousel-item .slide-two-text h2 {
-      font-size: 4.5rem;
-      margin-left: -10px; }
-    #HomeCarousel .carousel-item .slide-two-text h5, #HomeCarousel .carousel-item .slide-two-text i {
-      display: inline-block;
-      margin-left: 8px;
-      font-size: 1.3rem;
-      color: #324e41;
-      transition: all 0.3s ease-in-out;
-      text-shadow: 1px 1px 2px #818181; }
-      #HomeCarousel .carousel-item .slide-two-text h5:hover + i, #HomeCarousel .carousel-item .slide-two-text i:hover + i {
-        position: relative;
-        -webkit-transform: translate(15px, 0);
-        -moz-transform: translate(15px, 0);
-        -o-transform: translate(15px, 0);
-        -ms-transform: translate(15px, 0);
-        transform: translate(15px, 0); }
-    @media only screen and (max-width: 992px) {
-      #HomeCarousel .carousel-item .slide-two-text {
-        padding-top: 6rem;
-        height: 200px;
-        padding: 40px; }
-        #HomeCarousel .carousel-item .slide-two-text h2 {
-          font-size: 4rem; } }
-    @media only screen and (max-width: 768px) {
-      #HomeCarousel .carousel-item .slide-two-text {
-        padding-top: 6.8rem; }
-        #HomeCarousel .carousel-item .slide-two-text h2 {
-          font-size: 2.5rem; } }
-  #HomeCarousel .carousel-item img {
-    padding: 100px 7% 0 7%; }
-  #HomeCarousel .carousel-item .slide-one-img {
-    float: right; }
-  #HomeCarousel .carousel-item .slide-two-img {
-    float: left; }
+#HomeCarousel {
+  grid-area: carousel; }
+  #HomeCarousel .carousel-item {
+    background-color: #8db5a3; }
+    #HomeCarousel .carousel-item .slide-one-text {
+      position: absolute;
+      width: 40%;
+      left: 2%;
+      top: 8%; }
+      @media only screen and (max-width: 992px) {
+        #HomeCarousel .carousel-item .slide-one-text {
+          position: static;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 2rem;
+          padding: 0 5px 0; } }
+      #HomeCarousel .carousel-item .slide-one-text h1 {
+        font-size: 4.8rem;
+        color: white; }
+      @media only screen and (max-width: 992px) {
+        #HomeCarousel .carousel-item .slide-one-text {
+          height: 200px; }
+          #HomeCarousel .carousel-item .slide-one-text h1 {
+            font-size: 3.8rem; } }
+      #HomeCarousel .carousel-item .slide-one-text .punchline {
+        color: #b48f30da; }
+    #HomeCarousel .carousel-item .slide-two-text {
+      position: absolute;
+      width: 50%;
+      left: 52%;
+      top: 30%; }
+      @media only screen and (max-width: 992px) {
+        #HomeCarousel .carousel-item .slide-two-text {
+          position: static;
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 2rem;
+          padding: 0 5px 0; } }
+      #HomeCarousel .carousel-item .slide-two-text h4 {
+        color: white;
+        font-size: 2.4rem; }
+      #HomeCarousel .carousel-item .slide-two-text h2 {
+        font-size: 4.5rem;
+        margin-left: -10px; }
+      #HomeCarousel .carousel-item .slide-two-text h5, #HomeCarousel .carousel-item .slide-two-text i {
+        display: inline-block;
+        margin-left: 8px;
+        font-size: 1.3rem;
+        color: #324e41;
+        transition: all 0.3s ease-in-out;
+        text-shadow: 1px 1px 2px #818181; }
+        #HomeCarousel .carousel-item .slide-two-text h5:hover + i, #HomeCarousel .carousel-item .slide-two-text i:hover + i {
+          position: relative;
+          -webkit-transform: translate(15px, 0);
+          -moz-transform: translate(15px, 0);
+          -o-transform: translate(15px, 0);
+          -ms-transform: translate(15px, 0);
+          transform: translate(15px, 0); }
+      @media only screen and (max-width: 992px) {
+        #HomeCarousel .carousel-item .slide-two-text {
+          padding-top: 6rem;
+          height: 200px;
+          padding: 40px; }
+          #HomeCarousel .carousel-item .slide-two-text h2 {
+            font-size: 4rem; } }
+      @media only screen and (max-width: 768px) {
+        #HomeCarousel .carousel-item .slide-two-text {
+          padding-top: 6.8rem; }
+          #HomeCarousel .carousel-item .slide-two-text h2 {
+            font-size: 2.5rem; } }
+    #HomeCarousel .carousel-item img {
+      padding: 100px 7% 0 7%; }
+    #HomeCarousel .carousel-item .slide-one-img {
+      float: right; }
+    #HomeCarousel .carousel-item .slide-two-img {
+      float: left; }
 
 /*# sourceMappingURL=app.css.map */

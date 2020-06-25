@@ -1,6 +1,4 @@
-
-#HomeCarousel
-    grid-area: carousel
+//HOME PAGE
 #home-intro
     grid-area: intro
     display: grid
@@ -42,12 +40,7 @@
         font-weight: bold
         font-size: 2rem
     hr
-        width: min(100px, 25%)
-        margin: 0 auto
-        border: none
-        border-radius: 3px
-        height: 5px
-        background-color: darken($lgrey, 4%)
+        +horizontal-line($lgrey)
     .companies-wrapper
         padding: 30px 15% 0
         display: grid
@@ -62,8 +55,6 @@
         .client
             text-align: center
             +center-vertically()
-
-
 
 
 #home-description
@@ -99,17 +90,133 @@
             margin-bottom: 5rem
             +breakpoint-tablet()
                 margin-bottom: 0
+//------------------------------------
 
+//SERVICES PAGE
 #services-content
     grid-area: "content"
     background-color: $primary
     min-height: 900px
+//-------------------------------------
 
+//ABOUT PAGE
 #about-content
     grid-area: "content"
-    background-color: $primary
-    min-height: 900px
+    .mission-wrapper
+        text-align: center
+        padding: 110px 20% 45px
+        h1 
+            font-size: 2rem
+        h4
+            margin-top: 30px
+            color: black
+            font-size: 1.5rem
+            font-weight: 549
+        +breakpoint-mobile()
+            padding-left: 0
+            paddding-right: 0
+            h4
+                font-size: 2.5rem  
+        +breakpoint-tablet()
+            padding-left: 10%
+            paddding-right: 10%
+            h4
+                font-size: 1.8rem   
+        +breakpoint-smlaptop()
+            padding-left: 18%
+            paddding-right: 18%
+            h4
+                font-size: 1.6rem 
 
+    .focus-icons
+        background-color: $lgrey
+        display: flex
+        justify-content: space-between
+        margin: 0 auto
+        padding: 70px 10% 70px
+        
+        .icon
+            +icon-circle($primary)   
+            text-align: center
+            h3  
+                padding-top: 5px
+                font-size: 1.3rem
+            h6
+                color: black
+                font-size: 0.9rem
+                width: 130px
+                margin: 0 auto
+        +breakpoint-mobile()
+            display: block
+            .icon + .icon
+                margin-top: 30px
+                            
+    .team-wrapper
+        background-color: $primary
+        position: relative
+        overflow: hidden
+        .bg
+            position: absolute
+            opacity: 0.1
+            z-index: 0
+        .portrait
+            display: block
+            width: 30%
+            padding-top: 130px
+            margin-left: min(20%, 600px)
+            position: relative
+            +breakpoint-mobile()
+                margin: auto
+                padding-top: 350px
+                width: max(30%, 300px)
+        .dad-description
+            position: absolute
+            width: 48%
+            left: 47%
+            top: 10%
+            z-index: 2
+            +breakpoint-mobile()
+                left: 5%
+                top: 7%
+                width: 90%  
+            h3
+                font-weight: bold
+                font-size: 2.2rem
+            h5
+                font-weight: 549
+                color: white
+                font-size: 1.5rem
+                +breakpoint-tablet()
+                    font-size: 1.3rem
+            p   
+                color: white
+                font-size: 1.3rem
+                +breakpoint-tablet()
+                    font-size: 1.1rem
+            hr 
+                +horizontal-line(white)
+                margin: 0
+                margin-bottom: 5px
+                
+    .company-history
+        width: 93%
+        margin: 0 auto
+        padding: 100px 100px
+        h2  
+            font-size: 2.7rem
+            padding-bottom: 8px
+            +breakpoint-mobile()
+                padding-bottom: 16px
+        p   
+            font-size: 1.1rem
+            line-height: 1.7rem
+        +breakpoint-mobile()
+            padding-left: 50px
+            padding-right: 50px
+
+//----------------------------------
+
+//CONTACT PAGE
 #contact-content
     grid-area: "content"
     .landscape-wrapper
@@ -132,8 +239,6 @@
             h5         
                 color: white        
                 font-size: 1rem
-            button
-                background-color: white
             +breakpoint-tablet()
                 h1
                     font-size: 4rem

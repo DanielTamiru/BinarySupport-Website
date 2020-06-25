@@ -43,7 +43,6 @@
     &:hover, &:active
         background-color: $color
         color: white
-
 =translate($right, $up)
     -webkit-transform: translate($right,$up)
     -moz-transform: translate($right,$up)
@@ -56,3 +55,24 @@
     top: 50%
     transform: translateY(-50%)
     
+=horizontal-line($color)
+    width: min(100px, 25%)
+    margin: 0 auto
+    border: none
+    border-radius: 3px
+    height: 5px
+    background-color: darken($color, 4%)
+
+=icon-circle($icon-color)
+    color: $icon-color
+    font-size: 4rem
+    i
+        display: inline-block
+        text-align: center
+        -webkit-box-radius: 50%
+        -moz-border-radius: 50%
+        border-radius: 50%
+        padding: 30px
+
+        background-color: inherit
+        border: 6px solid $icon-color
