@@ -1,10 +1,12 @@
+body 
+    font-family: $default-font
 h1
     color: $primary
     font-weight: bold
 
 h2, h3, h4
-    color: $accent
-    font-weight: 549
+    color: $secondary
+    font-weight: 900
 a, button
     cursor: grab
     &:focus
@@ -50,5 +52,5 @@ article
     +standard-button($primary)
 
 .secondary-button
-    +standard-button($accent)
+    +standard-button($secondary)
     
