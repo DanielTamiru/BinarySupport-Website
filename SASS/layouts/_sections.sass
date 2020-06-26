@@ -100,8 +100,64 @@
 //SERVICES PAGE
 #services-content
     grid-area: "content"
-    background-color: $primary
-    min-height: 900px
+    .service-intro
+        position: relative
+        background-color: $lgrey
+        h1 
+            position: relative
+            z-index: 2
+            width: min(65%, 700px)
+            padding: 120px 0 120px min(20%, 400px)
+            font-size: 4rem
+            font-weight: 600
+            color: black
+            +breakpoint-mobile()
+                font-size: 3.5rem
+        img 
+            position: absolute
+            right: 24%
+            top: 80px
+            width: 480px
+            z-index: 1
+            +breakpoint-mobile()
+                display: none
+
+    .services-strip
+        background-color: $primary
+        h2, h4
+            color: white
+            padding: 40px 40px
+            font-size: 2.5rem
+        h4 
+            background-color: lighten($secondary, 14%)
+            padding: 28px 28px
+            font-size: 1.5rem
+
+    .service-grid
+        display: grid
+        margin: 0 auto
+        row-gap: 35px
+        width: 86%
+        padding: 50px 10px
+        grid-template-columns: repeat(3, 1fr)
+        .card
+            width: 90%
+            margin: 0 auto
+            .card-link  
+                color: $accent
+        +breakpoint-mobile()
+            grid-template-columns: 1fr 1fr
+            
+    
+    .additional-service-grid
+        @extend .service-grid
+        width: 75%
+        grid-template-columns: repeat(5, 1fr)
+        .card
+            width: 88%
+        +breakpoint-mobile()
+            grid-template-columns: repeat(2, 1fr)
+
 //-------------------------------------
 
 //ABOUT PAGE
@@ -205,9 +261,9 @@
                 margin-bottom: 5px
                 
     .company-history
-        width: 93%
+        width: min(910px, 88%)
         margin: 0 auto
-        padding: 100px 100px
+        padding: 100px 0
         h2  
             font-size: 2.7rem
             padding-bottom: 8px
