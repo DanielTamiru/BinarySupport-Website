@@ -12,6 +12,8 @@
     <!--Font Awesome-->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <!--Google Fonts-->
+    <!--app script-->
+    <script src="JS/contact.js" async></script>
 </head>
 
 <body>
@@ -28,26 +30,27 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Name:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Email:</label>
-                        <input type="text" class="form-control" id="recipient-name">
-                        <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
-                    </div>
-    
-                    <div class="form-group">
-                        <label for="message-text" class="col-form-label">Message: </label>
-                        <textarea class="form-control" id="message-text"></textarea>
-                    </div>
+                    <iframe name="hiddenFrame" style="display: none;"></iframe>
+                    <form action="http://127.0.0.1:3000" method="POST" enctype="application/x-www-form-urlencoded" target="hiddenFrame" id="contact-form">
+                        <div class="form-group">
+                            <label for="messenger-name" class="col-form-label">Name:</label>
+                            <input name="sender" type="text" class="form-control" id="messenger-name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="messenger-email" class="col-form-label">Email:</label>
+                            <input name="address" type="text" class="form-control" id='messenger-email'>
+                            <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message: </label>
+                            <textarea name="text" class="form-control" id="message-text"></textarea>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary send-btn">Send message</button>
+                    <button type="button" class="btn btn-primary send-btn" data-dismiss="modal" id="submit-message-btn">Send message</button>
                 </div>
                 </div>
             </div>
@@ -56,7 +59,7 @@
         <header>
             <!--navbar-->
             <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-                <a class="navbar-brand" href="#">BinarySupport</a>
+                <a class="navbar-brand" href="#"><img src="assets/Standard Logo Files/Black on Transparent.png" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -81,7 +84,7 @@
               <div class="navbar-block"></div>
         </header>
 
-        <div id="HomeCarousel" class="carousel slide" data-ride="carousel">
+        <div id="HomeCarousel" class="carousel slide" data-ride="carousel" data-interval='3000'>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="slide-one-text">
@@ -93,11 +96,13 @@
               </div>
               <div class="carousel-item">
                 <div class="slide-two-text">
+                   <img class="quotation-marks" src="assets/quotation marks small.png">
                    <h4>Computer Issues?</h4>
                    <h2>We're here to help</h2>
-                   <a href="services.html"><h5>Our Services</h5><i class="fa fa-caret-right" aria-hidden="true"></i></a>
+                   <a href="services.html"><h5>Our Services</h5><i class="fa fa-caret-right" aria-hidden="true"></i></a>  
                 </div>
-                <img class="slide-two-img img-fluid" src="assets/computers.png" alt="Second slide">
+                <img class="slide-two-img img-fluid" src="assets/customer-service-lady.png" alt="Second slide">
+                
               </div>
             </div>
             <a class="carousel-control-prev" href="#HomeCarousel" role="button" data-slide="prev">

@@ -75,7 +75,9 @@ header {
   gap: inherit;
   grid-template-columns: 6fr 5fr;
   background-color: #f3f7fc;
-  margin-top: 0 auto;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
   color: black; }
   @media only screen and (max-width: 768px) {
     #home-intro {
@@ -142,7 +144,8 @@ header {
   background-color: #f3f7fc;
   display: grid;
   grid-template-columns: 3fr 6fr;
-  margin-top: 3rem; }
+  margin-top: 3rem;
+  padding-bottom: 26px; }
   @media only screen and (max-width: 992px) {
     #home-description {
       grid-template-columns: 1fr; } }
@@ -373,13 +376,15 @@ header {
     max-height: 500px;
     overflow: hidden; }
     #contact-content .landscape-wrapper img {
+      position: relative;
       width: 100%;
-      opacity: 0.3; }
+      z-index: 1;
+      opacity: 0.6; }
     #contact-content .landscape-wrapper .contact-banner {
       width: 100%;
       text-align: center;
       position: absolute;
-      z-index: 1;
+      z-index: 2;
       top: 220px; }
       #contact-content .landscape-wrapper .contact-banner h1 {
         color: white;
@@ -446,7 +451,10 @@ footer {
       margin-right: 35px; }
 
 .navbar .nav-item {
-  margin: 0 6px 0; }
+  padding: 35px 6px 0; }
+  @media only screen and (max-width: 768px) {
+    .navbar .nav-item {
+      padding: 0 6px 0; } }
 .navbar .navbar-toggler {
   border: none; }
   .navbar .navbar-toggler:focus {
@@ -534,8 +542,11 @@ footer {
     #HomeCarousel .carousel-item .slide-one-text {
       position: absolute;
       width: 40%;
-      left: 2%;
-      top: 8%; }
+      left: 3.5%;
+      top: 14%; }
+      #HomeCarousel .carousel-item .slide-one-text h1, #HomeCarousel .carousel-item .slide-one-text h2, #HomeCarousel .carousel-item .slide-one-text h3, #HomeCarousel .carousel-item .slide-one-text h4 {
+        position: relative;
+        z-index: 2; }
       @media only screen and (max-width: 992px) {
         #HomeCarousel .carousel-item .slide-one-text {
           position: static;
@@ -555,9 +566,12 @@ footer {
         color: #b48f30da; }
     #HomeCarousel .carousel-item .slide-two-text {
       position: absolute;
-      width: 50%;
-      left: 52%;
+      width: 60%;
+      left: 42%;
       top: 30%; }
+      #HomeCarousel .carousel-item .slide-two-text h1, #HomeCarousel .carousel-item .slide-two-text h2, #HomeCarousel .carousel-item .slide-two-text h3, #HomeCarousel .carousel-item .slide-two-text h4 {
+        position: relative;
+        z-index: 2; }
       @media only screen and (max-width: 992px) {
         #HomeCarousel .carousel-item .slide-two-text {
           position: static;
@@ -566,16 +580,16 @@ footer {
           margin-top: 2rem;
           padding: 0 5px 0; } }
       #HomeCarousel .carousel-item .slide-two-text h4 {
-        color: white;
-        font-size: 2.4rem; }
+        font-size: 4rem; }
       #HomeCarousel .carousel-item .slide-two-text h2 {
-        font-size: 4.5rem;
-        margin-left: -10px; }
+        margin-left: -10px;
+        color: white;
+        font-size: 5.6rem; }
       #HomeCarousel .carousel-item .slide-two-text h5, #HomeCarousel .carousel-item .slide-two-text i {
         display: inline-block;
         margin-left: 8px;
-        font-size: 1.3rem;
-        color: #cd4441;
+        font-size: 1.4rem;
+        color: #324e41;
         transition: all 0.3s ease-in-out; }
         #HomeCarousel .carousel-item .slide-two-text h5:hover + i, #HomeCarousel .carousel-item .slide-two-text i:hover + i {
           position: relative;
@@ -584,6 +598,18 @@ footer {
           -o-transform: translate(15px, 0);
           -ms-transform: translate(15px, 0);
           transform: translate(15px, 0); }
+      #HomeCarousel .carousel-item .slide-two-text .quotation-marks {
+        position: absolute;
+        opacity: 0.25;
+        height: 333px;
+        left: 40%;
+        top: -60%;
+        z-index: 1; }
+        @media only screen and (max-width: 992px) {
+          #HomeCarousel .carousel-item .slide-two-text .quotation-marks {
+            top: -6%;
+            left: 45%;
+            height: 250px; } }
       @media only screen and (max-width: 992px) {
         #HomeCarousel .carousel-item .slide-two-text {
           padding-top: 6rem;
@@ -593,9 +619,12 @@ footer {
             font-size: 4rem; } }
       @media only screen and (max-width: 768px) {
         #HomeCarousel .carousel-item .slide-two-text {
-          padding-top: 6.8rem; }
+          padding-top: 30px; }
           #HomeCarousel .carousel-item .slide-two-text h2 {
-            font-size: 2.5rem; } }
+            margin-left: 0;
+            font-size: 2.5rem; }
+          #HomeCarousel .carousel-item .slide-two-text h4 {
+            font-size: 3.5rem; } }
     #HomeCarousel .carousel-item img {
       padding: 100px 7% 0 7%; }
     #HomeCarousel .carousel-item .slide-one-img {

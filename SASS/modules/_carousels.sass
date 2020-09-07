@@ -24,7 +24,7 @@
     .carousel-item
         background-color: $primary
         .slide-one-text
-            +carousel-text(40%, 2%, 8%)
+            +carousel-text(40%, 3.5%, 14%)
             h1
                 font-size: 4.8rem
                 color: white
@@ -35,24 +35,36 @@
             .punchline
                 color: $secondary
         .slide-two-text
-            +carousel-text(50%, 52%, 30%)
+            +carousel-text(60%, 42%, 30%)
             h4
-                color: white
-                font-size: 2.4rem
+                font-size: 4rem
             h2
-                font-size: 4.5rem
                 margin-left: -10px
+                color: white
+                font-size: 5.6rem    
             h5, i
                 display: inline-block
                 margin-left: 8px
-                font-size: 1.3rem
-                color: $accent
+                font-size: 1.4rem
+                color: $dark-primary
                 transition: all .3s ease-in-out
                 &:hover + i 
                     position: relative
                     +translate(15px, 0)
+            
+            .quotation-marks
+                position: absolute
+                opacity: 0.25
+                height: 333px
+                left: 40%
+                top: -60%
+                z-index: 1
+                +breakpoint-tablet()
+                    top: -6%
+                    left: 45%
+                    height: 250px
+
                     
-                
             +breakpoint-tablet()
                 padding-top: 6rem
                 height: 200px
@@ -60,9 +72,12 @@
                 h2
                     font-size: 4rem
             +breakpoint-mobile()
-                padding-top: 6.8rem
+                padding-top: 30px     
                 h2
+                    margin-left: 0
                     font-size: 2.5rem
+                h4 
+                    font-size: 3.5rem
             
         img
             padding: 100px 7% 0 7%

@@ -11,15 +11,53 @@
     <link rel="stylesheet" href="CSS/app.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--app script-->
+    <script src="JS/contact.js" async></script>
 </head>
 
 <body>
     <div class="container-fluid" id="about-container">
+        <!--Contact Modal-->
+        <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog .modal-dialog-centered" role="document">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact Us</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <iframe name="hiddenFrame" style="display: none;"></iframe>
+                    <form action="http://127.0.0.1:3000" method="POST" enctype="application/x-www-form-urlencoded" target="hiddenFrame" id="contact-form">
+                        <div class="form-group">
+                            <label for="messenger-name" class="col-form-label">Name:</label>
+                            <input name="sender" type="text" class="form-control" id="messenger-name" >
+                        </div>
+                        <div class="form-group">
+                            <label for="messenger-email" class="col-form-label">Email:</label>
+                            <input name="address" type="text" class="form-control" id='messenger-email'>
+                            <p class="fine-print">Optional. Give us your email if you want a response to your message.</p>
+                        </div>
         
+                        <div class="form-group">
+                            <label for="message-text" class="col-form-label">Message: </label>
+                            <textarea name="text" class="form-control" id="message-text"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary close-btn" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary send-btn" data-dismiss="modal" id="submit-message-btn">Send message</button>
+                </div>
+                </div>
+            </div>
+        </div>
+
         <header>
             <!--navbar-->
             <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
-                <a class="navbar-brand" href="#">BinarySupport</a>
+                <a class="navbar-brand" href="#"><img src="assets/Standard Logo Files/Black on Transparent.png" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
@@ -87,7 +125,7 @@
           <div class="company-history">
             <h2>Our History</h2>
             <article>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.<br><br>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.<br>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<br>Mauris non lorem finibus, tincidunt eros ac, fermentum libero. Vestibulum justo diam, sagittis quis leo vel, placerat euismod ipsum. Pellentesque pretium ut dui ac aliquet. Integer bibendum bibendum leo vel feugiat. Sed semper, dui vitae congue venenatis, lectus elit pulvinar leo, in eleifend sem urna non ipsum.</p>
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.<br><br>Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.<br>Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.<br>Mauris non lorem finibus, tincidunt eros ac, fermentum libero. Vestibulum justo diam, sagittis quis leo vel, placerat euismod ipsum.</p>
             </article>
           </div>
         </section>
